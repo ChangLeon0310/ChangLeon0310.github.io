@@ -23,25 +23,15 @@ function Stars() {
 }
 function Cloud({ className }) { return <div className={`cloud ${className}`}><i/><i/><i/></div> }
 function VillageScene({ kind, isDay, paused }) {
-  return <div className={`scene weather-${kind} ${isDay ? 'day' : 'night'} ${paused ? 'paused' : ''}`}>
-    <div className="sky" />
+  return <div className={`scene photo-scene weather-${kind} ${isDay ? 'day' : 'night'} ${paused ? 'paused' : ''}`}>
+    <div className="photo-background" />
+    <div className="photo-depth" />
     {!isDay && <Stars />}
-    <div className={isDay ? 'sun' : 'moon'} />
     <Cloud className="cloud-a"/><Cloud className="cloud-b"/><Cloud className="cloud-c"/>
-    <div className="far-mountain m1"/><div className="far-mountain m2"/>
-    <div className="near-hills"><i/><i/><i/></div>
     <div className="mist mist-a"/><div className="mist mist-b"/>
-    <div className="ground"/>
-    <div className="tree tree-a"><i/><b/><span/></div>
-    <div className="tree tree-b"><i/><b/><span/></div>
-    <div className="tree tree-c"><i/><b/><span/></div>
-    <div className="home home-a"><i className="roof"/><i className="wall"/><i className="window w1"/><i className="window w2"/><i className="door"/><i className="chimney"/></div>
-    <div className="home home-b"><i className="roof"/><i className="wall"/><i className="window w1"/><i className="window w2"/><i className="door"/><i className="chimney"/></div>
-    <div className="path"/>
-    <div className="lamp lamp-a"><i/></div><div className="lamp lamp-b"><i/></div>
-    <div className="bush bush-a"/><div className="bush bush-b"/><div className="flowers flowers-a">✦ ✿ ✦</div>
-    <div className="pond"><i/><i/><i/></div>
-    <div className="walker"><i className="head"/><i className="body"/><i className="leg one"/><i className="leg two"/>{['rain','thunder'].includes(kind) && <i className="umbrella"/>}</div>
+    <div className="sun-glow" />
+    <div className="window-glow glow-a"/><div className="window-glow glow-b"/><div className="window-glow glow-c"/>
+    <div className="ground-reflection" />
     {kind === 'rain' && <Rain/>}
     {kind === 'thunder' && <><Rain heavy/><div className="flash"/><div className="lightning">ϟ</div></>}
     {kind === 'snow' && <Snow/>}
@@ -93,7 +83,7 @@ export default function App() {
 
   return <main className="app">
     <header>
-      <div><small>WEATHER TOWN</small><h1>天空小鎮 <em>V4</em></h1></div>
+      <div><small>WEATHER TOWN</small><h1>山嵐天氣 <em>V5</em></h1></div>
       <button className="soft-button" onClick={() => setPaused(v => !v)}>{paused ? '▶ 開啟動畫' : 'Ⅱ 暫停動畫'}</button>
     </header>
 
@@ -132,6 +122,6 @@ export default function App() {
         </div>
       </article>
     </section>
-    <footer>天氣資料來自 Open-Meteo。CSS 插畫場景依即時天氣與日夜自動變化。</footer>
+    <footer>天氣資料來自 Open-Meteo。風景背景會依即時天氣與日夜自動變化。</footer>
   </main>
 }
