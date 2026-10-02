@@ -1,4 +1,4 @@
-name: Deploy Pixel Weather Town
+name: Deploy Weather Town V4
 
 on:
   push:
