@@ -1,4 +1,4 @@
-# 像素天氣小鎮
+# 像素天氣小鎮 V2
 
 16-bit RPG 風格的即時天氣網站，使用 React、Vite 與 Open-Meteo。
 
@@ -28,3 +28,6 @@ npm run preview
 - 定位功能需要 HTTPS，GitHub Pages 符合此條件。
 - 若拒絕定位，網站會繼續顯示台北市。
 - 天氣資料來自 Open-Meteo。
+
+
+V2 改為溫馨山中 RPG 小鎮場景，改善雨滴、道路、建築比例、景深與夜間燈光。
