@@ -1,7 +1,7 @@
 {
-  "name": "weather-town-v6",
+  "name": "window-weather-cottage",
   "private": true,
-  "version": "6.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
