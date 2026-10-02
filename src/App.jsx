@@ -23,17 +23,19 @@ function Stars() {
 }
 function Cloud({ className }) { return <div className={`cloud ${className}`}><i/><i/><i/></div> }
 function VillageScene({ kind, isDay, paused }) {
-  return <div className={`scene photo-scene weather-${kind} ${isDay ? 'day' : 'night'} ${paused ? 'paused' : ''}`}>
-    <div className="photo-background" />
-    <div className="photo-depth" />
+  return <div className={`scene layered-scene weather-${kind} ${isDay ? 'day' : 'night'} ${paused ? 'paused' : ''}`}>
+    <div className="art-layer art-far" />
+    <div className="art-layer art-mid" />
+    <div className="art-layer art-front" />
+    <div className="depth-light" />
     {!isDay && <Stars />}
     <Cloud className="cloud-a"/><Cloud className="cloud-b"/><Cloud className="cloud-c"/>
     <div className="mist mist-a"/><div className="mist mist-b"/>
     <div className="sun-glow" />
-    <div className="window-glow glow-a"/><div className="window-glow glow-b"/><div className="window-glow glow-c"/>
-    <div className="ground-reflection" />
-    {kind === 'rain' && <Rain/>}
-    {kind === 'thunder' && <><Rain heavy/><div className="flash"/><div className="lightning">ϟ</div></>}
+    <div className="village-lights"><i/><i/><i/><i/><i/></div>
+    <div className="water-shimmer"><i/><i/><i/></div>
+    {kind === 'rain' && <><Rain/><div className="wet-glow"/></>}
+    {kind === 'thunder' && <><Rain heavy/><div className="wet-glow"/><div className="flash"/><div className="lightning">ϟ</div></>}
     {kind === 'snow' && <Snow/>}
     <div className="night-tint"/><div className="weather-tint"/><div className="vignette"/>
   </div>
@@ -83,7 +85,7 @@ export default function App() {
 
   return <main className="app">
     <header>
-      <div><small>WEATHER TOWN</small><h1>山嵐天氣 <em>V5</em></h1></div>
+      <div><small>WEATHER TOWN</small><h1>山嵐小鎮 <em>V6</em></h1></div>
       <button className="soft-button" onClick={() => setPaused(v => !v)}>{paused ? '▶ 開啟動畫' : 'Ⅱ 暫停動畫'}</button>
     </header>
 
@@ -122,6 +124,6 @@ export default function App() {
         </div>
       </article>
     </section>
-    <footer>天氣資料來自 Open-Meteo。風景背景會依即時天氣與日夜自動變化。</footer>
+    <footer>天氣資料來自 Open-Meteo。分層插畫會依即時天氣與日夜自動變化。</footer>
   </main>
 }

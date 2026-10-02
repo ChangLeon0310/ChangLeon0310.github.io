@@ -1,11 +1,8 @@
-# 山嵐天氣 V5
+# 山嵐小鎮 V6
 
-以免費風景照片作為主視覺，搭配 React、Open-Meteo 與程式化天氣動畫。
+完整數位插畫以三層視差呈現，搭配即時天氣、雨雪、霧氣、雷電、日夜、村落燈光與河面光影。
 
-背景照片來源：Pexels，原始照片頁面 https://www.pexels.com/photo/460373/
+主要場景插畫由 Microsoft Copilot 產生。
 
-## 功能
-- 即時天氣與五日預報
-- 日夜、陰雨、雷雨、雪花、霧氣與燈光效果
-- 動態景深與緩慢鏡頭移動
-- 定位與手機版排版
+## 部署
+將檔案覆蓋 GitHub Pages repository 後提交至 main，GitHub Actions 會自動建置發布。

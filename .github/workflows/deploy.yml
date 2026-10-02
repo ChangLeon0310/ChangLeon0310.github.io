@@ -1,4 +1,4 @@
-name: Deploy Weather Town V5
+name: Deploy Weather Town V6
 
 on:
   push:
