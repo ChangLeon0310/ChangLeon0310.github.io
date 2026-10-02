@@ -2,14 +2,123 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>測試網站</title>
+<title>張昌量</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#050816;
+    overflow:hidden;
+    font-family:"Microsoft JhengHei",sans-serif;
+}
+
+/* 背景光暈 */
+body::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,#00ccff55,#00000000);
+    animation:float 8s infinite alternate;
+}
+
+@keyframes float{
+    from{
+        transform:translate(-100px,-50px);
+    }
+    to{
+        transform:translate(100px,50px);
+    }
+}
+
+/* 玻璃面板 */
+.card{
+    z-index:1;
+
+    width:500px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 0 30px rgba(0,200,255,0.3);
+}
+
+h1{
+    color:#00d9ff;
+    font-size:3rem;
+    text-shadow:
+        0 0 10px #00d9ff,
+        0 0 20px #00d9ff;
+}
+
+h2{
+    color:white;
+    margin-top:15px;
+}
+
+p{
+    color:#cccccc;
+    margin-top:12px;
+    line-height:1.8;
+}
+
+.button{
+    display:inline-block;
+    margin-top:25px;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    color:white;
+
+    text-decoration:none;
+
+    border:1px solid #00d9ff;
+
+    transition:0.3s;
+}
+
+.button:hover{
+    background:#00d9ff;
+    color:black;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>Hello World</h1>
+<div class="card">
 
-<p>這是我的第一個網站</p>
+<h1>張昌量</h1>
 
-</body>
+<h2>長庚大學</h2>
+
+<p>
+排球<br>
+羽球
+</p>
+
+<a class="button" href="</body>
 </html>
